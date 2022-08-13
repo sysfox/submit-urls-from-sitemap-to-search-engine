@@ -1,15 +1,5 @@
 const fs = require('fs');
 var request = require('request');
-var { google } = require('googleapis');
-var key = require('./service_account.json');
-
-const jwtClient = new google.auth.JWT(
-  key.client_email,
-  null,
-  key.private_key,
-  ['https://www.googleapis.com/auth/indexing'],
-  null
-);
 
 const batch = fs
   .readFileSync('urls.txt')
@@ -36,16 +26,4 @@ jwtClient.authorize(function(err, tokens) {
     };
   });
 
-  const options = {
-    url: 'https://indexing.googleapis.com/batch',
-    method: 'POST',
-    headers: {
-      'Content-Type': 'multipart/mixed'
-    },
-    auth: { bearer: tokens.access_token },
-    multipart: items
-  };
-  request(options, (err, resp, body) => {
-    console.log(body);
-  });
-});
+  
