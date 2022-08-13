@@ -1,12 +1,12 @@
 name: Bot Log
 on:
   schedule:
-    - cron: '0 20 * * *'
+    - cron: '0 23 * * *'
   push:
   workflow_dispatch:
 jobs:
   log:
-    if: github.repository == 'MHG-LAB/submit-urls-from-sitemap-to-search-engine'
+    if: github.repository == 'sysfox/submit-urls-from-sitemap-to-search-engine'
     runs-on: Ubuntu-latest
     env:
       TZ: Asia/Shanghai
