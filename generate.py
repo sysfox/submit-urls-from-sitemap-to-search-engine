@@ -39,7 +39,7 @@ for data in result:
         break
 
 # bing 提交随机5条
-bingUrllist= bingUrllist + random.sample(result,10)
+bingUrllist= bingUrllist + random.sample(result,0)
 # baidu google 提交随机50条
 # googleUrllist=googleUrllist + random.sample(result,50)
 
