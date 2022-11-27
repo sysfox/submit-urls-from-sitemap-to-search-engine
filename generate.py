@@ -4,7 +4,7 @@ import urllib
 import urllib.request
 import random
 
-site = 'https://fox.js.cool'
+site = 'https://blog.trfox.ml'
 sitemaps = ['/sitemap.xml']
 
 result = []
@@ -31,7 +31,7 @@ for data in result:
     i=i+1
     result.remove(data)
     # bing 提交前50条
-    if i <= 50:
+    if i <= 1000:
         bingUrllist.append(data)
     # baidu google 提交前50条
     googleUrllist.append(data)
