@@ -31,7 +31,7 @@ for data in result:
     i=i+1
     result.remove(data)
     # bing 提交前50条
-    if i <= 50:
+    if i <= 30:
         bingUrllist.append(data)
     # baidu google 提交前50条
     googleUrllist.append(data)
@@ -39,7 +39,7 @@ for data in result:
         break
 
 # bing 提交随机5条
-bingUrllist= bingUrllist + random.sample(result,50)
+bingUrllist= bingUrllist + random.sample(result,30)
 # baidu google 提交随机50条
 # googleUrllist=googleUrllist + random.sample(result,50)
 
