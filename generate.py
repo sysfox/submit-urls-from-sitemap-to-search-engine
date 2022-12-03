@@ -35,7 +35,7 @@ for data in result:
         bingUrllist.append(data)
     # baidu google 提交前50条
     googleUrllist.append(data)
-    if i == 50:
+    if i == 50;
         break
 
 # bing 提交随机5条
