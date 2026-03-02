@@ -21,7 +21,7 @@ jobs:
     - name: Setup Node.js 10.x
       uses: actions/setup-node@master
       with:
-        node-version: "10.x"
+        node-version: "24.x"
     - name: Npm install
       run: npm install
     - name: Install requests
