@@ -15,7 +15,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Set up python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v7
       with:
         python-version: 3.8
     - name: Setup Node.js 10.x
